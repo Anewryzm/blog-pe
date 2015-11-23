@@ -1,0 +1,10 @@
+<h1>Welcome#index</h1>
+
+<% @posts.each do |post| %>
+
+	<em>(<%= post.created_at.strftime('%A, %B, %d')%>)</em>
+	<h2>
+		<a href=""> <%= link_to post.title, post %></a>
+	</h2>
+	<p> <%= post.content %> </p>
+<% end%>
